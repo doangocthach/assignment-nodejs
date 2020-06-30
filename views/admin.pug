@@ -1,0 +1,190 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    link(rel='icon', type='image/png', sizes='16x16', href='plugins/images/favicon.png')
+    
+    title Ample Admin Template - The Ultimate Multipurpose admin template
+    // Bootstrap Core CSS
+    link(href='bootstrap/dist/css/bootstrap.min.css', rel='stylesheet')
+    // Menu CSS
+    link(href='plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.css', rel='stylesheet')
+    // toast CSS
+    link(href='plugins/bower_components/toast-master/css/jquery.toast.css', rel='stylesheet')
+    // morris CSS
+    link(href='plugins/bower_components/morrisjs/morris.css', rel='stylesheet')
+    // chartist CSS
+    link(href='plugins/bower_components/chartist-js/dist/chartist.min.css', rel='stylesheet')
+    link(href='plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.css', rel='stylesheet')
+    // animation CSS
+    link(href='css/animate.css', rel='stylesheet')
+    // Custom CSS
+    link(href='css/style.css', rel='stylesheet')
+    // color CSS
+    link#theme(href='css/colors/default.css', rel='stylesheet')
+    // HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries
+    // WARNING: Respond.js doesn't work if you view the page via file://
+    //if lt IE 9
+      script(src='https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js')
+      script(src='https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js')
+  body.fix-header
+    // ==============================================================
+    // Preloader
+    // ==============================================================
+    .preloader
+      svg.circular(viewBox='25 25 50 50')
+        circle.path(cx='50', cy='50', r='20', fill='none', stroke-width='2', stroke-miterlimit='10')
+    // ==============================================================
+    // Wrapper
+    // ==============================================================
+    #wrapper
+      // ==============================================================
+      // Topbar header - style you can find in pages.scss
+      // ==============================================================
+      nav.navbar.navbar-default.navbar-static-top.m-b-0
+        .navbar-header
+          .top-left-part
+            // Logo
+            a.logo(href='index.html')
+              // Logo icon image, you can use font-icon also
+              b
+                // This is dark logo icon
+                img.dark-logo(src='plugins/images/admin-logo.png', alt='home')
+                // This is light logo icon
+                img.light-logo(src='plugins/images/admin-logo-dark.png', alt='home')
+              // Logo text image you can use text also
+              span.hidden-xs
+                // This is dark logo text
+                img.dark-logo(src='plugins/images/admin-text.png', alt='home')
+                // This is light logo text
+                img.light-logo(src='plugins/images/admin-text-dark.png', alt='home')
+          // /Logo
+          ul.nav.navbar-top-links.navbar-right.pull-right
+            li
+              form.app-search.hidden-sm.hidden-xs.m-r-10(role='search')
+                input.form-control(type='text', placeholder='Search...')
+                a(href='')
+                  i.fa.fa-search
+            li
+
+        // /.navbar-header
+        // /.navbar-top-links
+        // /.navbar-static-side
+        // End Top Navigation
+        // ==============================================================
+        // Left Sidebar - style you can find in sidebar.scss
+        // ==============================================================
+        .navbar-default.sidebar(role='navigation')
+          .sidebar-nav.slimscrollsidebar
+            .sidebar-head
+              h3
+                span.fa-fw.open-close
+                  i.ti-close.ti-menu
+                span.hide-menu Navigation
+            ul#side-menu.nav
+              li(style='padding: 70px 0 0;')
+                a.waves-effect(href='index.html')
+                  i.fa.fa-clock-o.fa-fw(aria-hidden='true')
+                  | Add products
+            .center.p-20
+        // ==============================================================
+        // End Left Sidebar
+        // ==============================================================
+        // ==============================================================
+        // Page Content
+        // ==============================================================
+        #page-wrapper
+
+        
+            section.login-block
+            .container
+                .row
+                .col-md-4.login-sec
+                    h2.text-center Add product
+                    form.login-form(method='POST' action='add-products' enctype="multipart/form-data")
+                      .form-group
+                          label.text-uppercase(for='product_name') Product Name
+                          input.form-control(type='text', placeholder='', name='product_name')
+                      .form-group
+                          label.text-uppercase(for='price') Price
+                          input.form-control(type='number', placeholder='' name='price')
+                      .form-group
+                          label.text-uppercase(for='description') Description
+                          textarea.form-control(type='number', placeholder='', name='description')
+                      .form-group
+                          label.text-uppercase(for='image') Images
+                          input.form-control(type='file', placeholder='', name='image' multiple)    
+                      .form-check
+                          label.form-check-label
+                          button.btn.btn-login.float-right(type='submit') Submit
+                    
+                .col-md-8.banner-sec
+                    #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                 
+                    .carousel-inner(role='listbox')
+                        .carousel-item.active
+           
+                    table.table
+                        thead
+                            tr
+                            th(scope='col') #
+                            th(scope='col') Name
+                            th(scope='col') Description
+                            th(scope='col') Image
+                            th(scope='col') Price
+                        tbody
+                            tr
+                            th(scope='row') 1
+                            td Mark
+                            td Otto
+                            td Image
+                            td @mdo
+                            tr
+                            th(scope='row') 2
+                            td Jacob
+                            td Thornton
+                            td Image
+                            td @fat
+                            tr
+                            th(scope='row') 3
+                            td Larry
+                            td the Bird
+                            td Image
+                            td @twitter
+
+
+                    
+        // ==============================================================
+        // End Page Content
+        // ==============================================================
+        // ==============================================================
+        // End Wrapper
+        // ==============================================================
+        // ==============================================================
+        // All Jquery
+        // ==============================================================
+        script(src='plugins/bower_components/jquery/dist/jquery.min.js')
+        // Bootstrap Core JavaScript
+        script(src='bootstrap/dist/js/bootstrap.min.js')
+        // Menu Plugin JavaScript
+        script(src='plugins/bower_components/sidebar-nav/dist/sidebar-nav.min.js')
+        // slimscroll JavaScript
+        script(src='js/jquery.slimscroll.js')
+        // Wave Effects
+        script(src='js/waves.js')
+        // Counter js
+        script(src='plugins/bower_components/waypoints/lib/jquery.waypoints.js')
+        script(src='plugins/bower_components/counterup/jquery.counterup.min.js')
+        // chartist chart
+        script(src='plugins/bower_components/chartist-js/dist/chartist.min.js')
+        script(src='plugins/bower_components/chartist-plugin-tooltip-master/dist/chartist-plugin-tooltip.min.js')
+        // Sparkline chart JavaScript
+        script(src='plugins/bower_components/jquery-sparkline/jquery.sparkline.min.js')
+        // Custom Theme JavaScript
+        script(src='js/custom.min.js')
+        script(src='js/dashboard1.js')
+        script(src='plugins/bower_components/toast-master/js/jquery.toast.js')
